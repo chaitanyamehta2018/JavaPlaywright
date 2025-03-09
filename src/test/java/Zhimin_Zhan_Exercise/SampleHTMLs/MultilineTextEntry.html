@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiline Text Verification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        textarea {
+            width: 100%;
+            height: 100px;
+            font-size: 16px;
+        }
+        button {
+            margin-top: 10px;
+            padding: 8px 12px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #output {
+            margin-top: 20px;
+            padding: 10px;
+            background: #f4f4f4;
+            border: 1px solid #ddd;
+            white-space: pre-wrap; /* Ensures multiline text displays properly */
+        }
+    </style>
+</head>
+<body>
+    <h2>Enter Multiline Text</h2>
+    <textarea id="multilineInput" placeholder="Enter multiple lines of text here..."></textarea>
+    <br>
+    <button id="submitBtn">Submit</button>
+
+    <h3>Entered Text:</h3>
+    <div id="output"></div>
+
+    <script>
+        document.getElementById("submitBtn").addEventListener("click", function() {
+            let inputText = document.getElementById("multilineInput").value;
+            document.getElementById("output").innerText = inputText; // Preserves multiline formatting
+        });
+    </script>
+</body>
+</html>
