@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hidden Field Test</title>
+    <title>Hidden Currency Field Test</title>
 </head>
 <body>
 
-    <h2>Playwright Hidden Field Test</h2>
+    <h2>Hidden Currency Field Test</h2>
 
-    <form>
-        <input type="hidden" id="hiddenField" value="InitialValue">
-        <button type="button" onclick="alert(document.getElementById('hiddenField').value)">Check Value</button>
+    <form id="paymentForm">
+        <input type="hidden" name="currency" id="currencyField" value="USD"/>
+        <button type="button" onclick="alert(document.getElementById('currencyField').value)">Check Currency</button>
     </form>
 
 </body>
