@@ -1,6 +1,7 @@
 package Zhimin_Zhan_Exercise.Chapter5_TextField;
 
 import com.microsoft.playwright.*;
+import java.io.File;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
 
@@ -20,7 +21,9 @@ public class VerifyReadonlyOrDisabledTextFieldTest {
             BrowserContext context = browser.newContext();
             Page page = context.newPage();
             
-            page.navigate("file:///E:/Softwares/Java/JavaPlaywright/src/test/java/Zhimin_Zhan_Exercise/SampleHTMLs/ReadonlyOrDisabledTextField.html");
+            File file = new File("src/test/java/Zhimin_Zhan_Exercise/SampleHTMLs/ReadonlyOrDisabledTextField.html");
+            String filePath = file.getAbsolutePath();
+            page.navigate("file:///" + filePath.replace("\\", "/"));
             
             page.evaluate("document.getElementById('readonlyField').removeAttribute('readonly');");
             page.evaluate("document.getElementById('readonlyField').value = 'Hello';");
