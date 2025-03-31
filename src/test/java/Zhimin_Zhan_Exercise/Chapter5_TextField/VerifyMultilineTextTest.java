@@ -10,7 +10,7 @@ public class VerifyMultilineTextTest {
     @Test
     public void VerifyMultilineTextTest() throws InterruptedException { 
         try (Playwright playwright = Playwright.create()) {
-            // ✅ Set Chrome executable path (Update as per your system)//
+            // ✅ Set Chrome executable path (Update as per your system)
             String chromePath = "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe";  
 
             BrowserType.LaunchOptions options = new BrowserType.LaunchOptions()
